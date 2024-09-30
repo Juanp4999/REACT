@@ -4,10 +4,10 @@ import viteLogo from '/vite.svg';
 import PropTypes from 'prop-types';
 import './App.css';
 
-// Componente Contenedor que envuelve el contenido en un div con borde
+// Componente Contenedor 
 function Contenedor(props) {
   const estiloContenedor = {
-    border: '2px solid #3399ff', // borde alrededor del contenido
+    border: '2px solid #3399ff', 
     padding: '20px',
     borderRadius: '100px',
     margin: '20px 0'
@@ -16,21 +16,20 @@ function Contenedor(props) {
   return <div style={estiloContenedor}>{props.children}</div>;
 }
 
-// Validación de props del Contenedor
+// Validación de props del Container
 Contenedor.propTypes = {
   children: PropTypes.node.isRequired, // Asegúrate de que children sean un nodo válido de React y es requerido
 };
 
 // Componente Saludo
 function Saludo(props) {
-  // Definir un saludo basado en el idioma
   const saludos = {
     español: `Hola, ${props.nombre}. Bienvenido!`,
     inglés: `Hello, ${props.nombre}. Welcome!`,
     francés: `Bonjour, ${props.nombre}. Bienvenue!`,
   };
 
-  // Obtener el saludo correspondiente o un saludo por defecto
+
   const mensaje = saludos[props.idioma];
 
   return <h1>{mensaje}</h1>;
@@ -38,14 +37,14 @@ function Saludo(props) {
 
 // Validación de props del Saludo
 Saludo.propTypes = {
-  nombre: PropTypes.string.isRequired, // Asegúrate de que nombre sea requerido y de tipo string
-  idioma: PropTypes.string, // Asegúrate de que idioma sea un string
+  nombre: PropTypes.string.isRequired, 
+  idioma: PropTypes.string, 
 };
 
 function App() {
   const [count, setCount] = useState(0);
-  const [nombre, setNombre] = useState(''); // Estado para el nombre 
-  const [idioma, setIdioma] = useState('español'); // Estado para el idioma
+  const [nombre, setNombre] = useState('');
+  const [idioma, setIdioma] = useState('español'); 
 
   // manejar el saludo
   const manejarSaludo = () => {
@@ -76,7 +75,6 @@ function App() {
       {/* Botón para activar el prompt y establecer el nombre */}
       <button onClick={manejarSaludo}>Ingresa tu nombre</button> 
 
-      {/* Si el nombre está definido, renderiza el componente Saludo */}
       {nombre && (
         <Contenedor>
           <Saludo nombre={nombre} idioma={idioma} />
