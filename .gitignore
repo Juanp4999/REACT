@@ -1,0 +1,29 @@
+# Logs
+logs               # Ignora la carpeta 'logs' que puede contener registros (logs) generados durante el uso del proyecto.
+*.log              # Ignora todos los archivos con extensión .log, que son archivos de registros generados por la ejecución del programa.
+npm-debug.log*     # Ignora archivos de logs de depuración generados por npm cuando ocurren errores o problemas.
+yarn-debug.log*    # Ignora archivos de logs de depuración generados por Yarn.
+yarn-error.log*    # Ignora archivos de errores específicos de Yarn, generados durante la instalación o ejecución.
+pnpm-debug.log*    # Ignora archivos de logs de depuración generados por pnpm, otra herramienta de manejo de paquetes.
+lerna-debug.log*   # Ignora archivos de logs de depuración generados por Lerna, utilizada en proyectos con múltiples paquetes.
+
+# Dependencies
+node_modules       # Ignora la carpeta 'node_modules' donde se instalan las dependencias del proyecto. Esta carpeta se puede regenerar usando 'npm install' o 'yarn install'.
+
+# Build outputs
+dist               # Ignora la carpeta 'dist', que contiene los archivos de salida generados tras construir el proyecto. Estos archivos son generados automáticamente.
+dist-ssr           # Ignora la carpeta 'dist-ssr', utilizada para la salida de Server-Side Rendering (renderizado del lado del servidor) en algunos proyectos.
+
+# Local environment files
+*.local            # Ignora cualquier archivo con la extensión .local, que puede contener configuraciones locales específicas de cada desarrollador (como variables de entorno).
+
+# Editor directories and files
+.vscode/*          # Ignora la carpeta '.vscode', que contiene configuraciones específicas de Visual Studio Code.
+!.vscode/extensions.json # Excluye este archivo de ser ignorado. Este archivo contiene las recomendaciones de extensiones de VSCode que son útiles para otros colaboradores.
+.idea              # Ignora la carpeta '.idea', que es utilizada por editores JetBrains (como WebStorm o IntelliJ) para almacenar configuraciones de proyecto.
+.DS_Store          # Ignora el archivo '.DS_Store', un archivo oculto generado automáticamente por macOS para almacenar metadatos sobre las carpetas.
+*.suo              # Ignora archivos .suo, que son archivos de configuración de usuario creados por Visual Studio.
+*.ntvs*            # Ignora archivos relacionados con Node.js Tools for Visual Studio (NTVS), usados en proyectos de Node.js en Visual Studio.
+*.njsproj          # Ignora archivos de proyecto de Node.js (.njsproj), utilizados por Visual Studio para abrir proyectos de Node.js.
+*.sln              # Ignora archivos de solución (.sln) generados por Visual Studio. Son archivos que contienen información sobre los proyectos y cómo se agrupan.
+*.sw?              # Ignora archivos de intercambio (swap) utilizados por editores como Vim para almacenar temporalmente los cambios mientras se edita un archivo.
